@@ -16,7 +16,7 @@ const max = 50;
 
 let rand = aleatorio(min, max);
 
-while(rand !== 10){
+while(rand !== 2){
    rand = aleatorio(min, max);
    console.log(rand);
 }
