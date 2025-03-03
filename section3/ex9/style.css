@@ -27,14 +27,4 @@ body{
     margin-bottom: 45px;
 }
  
-.div2{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.div2 label, button{
-    margin: 10px;
-}
 
