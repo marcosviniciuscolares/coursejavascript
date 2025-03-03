@@ -1,5 +1,6 @@
 let segundos = 0;
 let timer;
+let textoRelogio = document.getElementById('relogio');
 
 function formatarTempo(segundos) {
     const horas = Math.floor(segundos / 3600);
@@ -13,19 +14,25 @@ function formatarTempo(segundos) {
     );
 }
 
+
 function iniciarTemp(){
+    clearInterval(timer);
      timer = setInterval(function (){
         segundos++;
         const tempoFormatado = formatarTempo(segundos);
         document.getElementById('relogio').innerText = tempoFormatado;
     }, 1000);
+    textoRelogio.classList.remove('pausado');
 }
 
 function pausarTemp(){
     clearInterval(timer);
+    textoRelogio.classList.add('pausado');
 }
 
 function zerarTemp(){
     clearInterval(timer);
-    document.getElementById('relogio').innerText = '00:00:00';
+    segundos=0;
+    textoRelogio.innerText = '00:00:00';
+    textoRelogio.classList.remove('pausado')
 }
