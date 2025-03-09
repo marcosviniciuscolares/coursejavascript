@@ -1,5 +1,5 @@
 function f1(){
-    let valores = 0;
+    let valores = 0; //escopo léxico é tudo que tá aqui dentro dessa função
                          //Variável especial
     for(let argumento of arguments){
         valores += argumento;
